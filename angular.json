@@ -23,6 +23,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -90,12 +92,26 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "incidencias:build:production",
+            "firebaseProject": "incidencias-a6bf7",
+            "firebaseHostingSite": "incidencias-a6bf7"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fa8cee16-c269-497f-bb87-d42a31917545"
   }
 }
