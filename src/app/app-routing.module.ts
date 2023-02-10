@@ -11,6 +11,8 @@ const routes: Routes = [
   
 { path: 'revisionIncidencias', loadChildren: () => import('./revision-incidencias/revision-incidencias.module').then(m => m.RevisionIncidenciasModule) },
 
+{ path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
+
 { path: '**', redirectTo: '/', pathMatch: 'full' }
   
 ];

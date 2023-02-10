@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GestionIncidenciasRoutingModule } from './gestion-incidencias-routing.module';
 import { GestionIncidenciasComponent } from './gestion-incidencias.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ListaGestionIncidenciaComponent } from './lista-gestion-incidencia/lista-gestion-incidencia.component';
+import { ListaGestionIncidenciaComponent } from './detalleIncidencia/lista-gestion-incidencia.component';
 
 
 @NgModule({

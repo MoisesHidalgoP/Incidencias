@@ -11,6 +11,8 @@ import { MenuComponent } from './menu/menu.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,7 @@ import { MenuComponent } from './menu/menu.component';
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     NgbModule,
+  
    
   ],
   providers: [],

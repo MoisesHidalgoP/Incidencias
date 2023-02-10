@@ -35,4 +35,14 @@ export class IncidenciasService {
     return this.conexion.doc(documentId).delete();
   }
 
+   //Metodo quye filtra incidencia 
+   filtrarIncidencia(revisada: boolean){
+    return this.firebase.collection(this.conexion, ref => ref.where('revisada', '==', revisada)).snapshotChanges();
+  }
+
+  //Metodo que recoge una incidencia especifica 
+  especificaIncidencia(documentId: string, id: number){
+    return this.firebase.collection(this.conexion, ref => ref.where('id', '==', id)).doc(documentId).snapshotChanges();
+  }
+
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GestionIncidenciasComponent } from './gestion-incidencias.component';
-import { ListaGestionIncidenciaComponent } from './lista-gestion-incidencia/lista-gestion-incidencia.component';
+import { ListaGestionIncidenciaComponent } from './detalleIncidencia/lista-gestion-incidencia.component';
 
 const routes: Routes = [
 { path: '', component: GestionIncidenciasComponent },
