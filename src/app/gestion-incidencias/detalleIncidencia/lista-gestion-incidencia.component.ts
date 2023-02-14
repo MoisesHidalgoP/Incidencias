@@ -26,6 +26,7 @@ export class ListaGestionIncidenciaComponent implements OnInit {
   nueva: boolean = false;
   documentId: any;
   coleccion:any;
+  dataIncidencia: any;
 
   constructor(
     private fb: FormBuilder,
@@ -70,6 +71,33 @@ export class ListaGestionIncidenciaComponent implements OnInit {
     cancel() {
       this.location.back();
     }
+
+    actualizarEstado(){
+      this.dataIncidencia = this.datosIncidencia.value;
+  
+      if (this.datosIncidencia.valid) {
+        
+        this.incidenciasService.updateIncidencia(this.documentId, this.datosIncidencia).then(
+          () => {
+            alert("Registro actualizado");
+          },
+          (error: any) => {
+            alert("¡A ocurrido un error!");
+            console.log(error);
+          }
+        );
+    
+      }else{
+        this.dataIncidencia.reset();
+        alert("Complete los campos");
+      }
+    }
+
+    goBack(): void {
+      this.location.back();
+    }
+
+
 
 
 
