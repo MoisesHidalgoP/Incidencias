@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
  
 
@@ -12,6 +13,8 @@ const routes: Routes = [
 { path: 'revisionIncidencias', loadChildren: () => import('./revision-incidencias/revision-incidencias.module').then(m => m.RevisionIncidenciasModule) },
 
 { path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
+
+{ path: 'login', component: LoginComponent },
 
 { path: '**', redirectTo: '/', pathMatch: 'full' }
   
